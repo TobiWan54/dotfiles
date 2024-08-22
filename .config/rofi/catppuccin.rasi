@@ -1,0 +1,69 @@
+* {
+    font:              "IBM Plex Sans 12";
+    background-color:   transparent;
+    text-color:         #cdd6f4;
+    cursor-color:       #f5e0dc;
+}
+
+window {
+    border-radius:      5px;
+    background-color:   rgba(108, 112, 134, 0.95);
+}
+
+mainbox {
+    padding:            0px;
+}
+
+inputbar {
+    background-color:   rgba(49, 50, 68, 0.95);
+
+    border-color:       #89b4fa;
+    border:             2px;
+    border-radius:      5px;
+
+    padding:            8px 10px;
+    spacing:            0px;
+}
+
+entry {
+    placeholder:        "";
+    placeholder-color:  #a6adc8;
+}
+
+listview {
+    background-color:   transparent;
+    padding:            10px;
+    scrollbar:          true;
+}
+
+element {
+    padding:            8px 16px;
+    spacing:            8px;
+    border-radius:      99px;
+}
+
+element selected {
+    background-color:   #89b4fa;
+    text-color:         #11111b;
+}
+
+element-text {
+    text-color:         inherit;
+    vertical-align:     0.5;
+}
+
+scrollbar {
+    handle-color:       #f5e0dc;
+    handle-width:       5px;
+    margin:             0 -9px 0 8px;
+}
+
+configuration {
+    drun {
+        display-name: "";
+    }
+    dmenu {
+        display-name: "";
+    }
+    scroll-method: 1;
+}

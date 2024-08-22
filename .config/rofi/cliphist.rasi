@@ -1,0 +1,24 @@
+@import "catppuccin.rasi"
+
+window {
+    location:       south;
+    width:          960;
+}
+
+listview {
+    lines:          12;
+}
+
+element {
+    orientation:    horizontal;
+    children:       [ element-text, element-icon ];
+    padding:        0px 16px;
+}
+
+element-icon {
+    size:           3em;
+}
+
+inputbar {
+    padding:        15px 15px;
+}

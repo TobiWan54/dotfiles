@@ -1,0 +1,26 @@
+font=IBM Plex Sans 12
+message-padding=12
+button-border-size=6
+button-dismiss-gap=0
+button-gap=0
+button-margin-right=5
+button-padding=4
+border-bottom-size=2
+edge=top
+layer=overlay
+
+[warning]
+background=#f9e2af
+border=#f9e2af
+button-background=#fab387
+border-bottom=#fab387
+text=#11111b
+button-text=#11111b
+
+[error]
+background=#eba0ac
+border=#eba0ac
+button-background=#f38ba8
+border-bottom=#f38ba8
+text=#11111b
+button-text=#11111b

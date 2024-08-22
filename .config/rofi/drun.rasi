@@ -1,0 +1,15 @@
+@import "catppuccin.rasi"
+
+window {
+    location:   center;
+    width:      720;
+}
+
+listview {
+    lines:      8;
+    scrollbar:  true;
+}
+
+element-icon {
+    size:       0.7em;
+}

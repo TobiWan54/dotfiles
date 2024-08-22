@@ -1,0 +1,138 @@
+{
+    "layer": "top",
+    "passthrough": false,
+    "reload_style_on_change": true,
+
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "group/system"],
+
+    "sway/workspaces": {
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        },
+        "format-icons": {
+            "default": ""
+        }
+    },
+    "clock": {
+        "format": "󰥔 {:%H:%M  󰃭 %d/%m/%y}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "format": {
+                "months": "<span color='#89dceb'><b>{}</b></span>",
+                "weekdays": "<span color='#fab387'><b>{}</b></span>",
+                "today": "<span color='#89dceb'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down",
+            "on-click": "mode",
+            "on-click-right": "shift_reset"
+        }
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10,
+        "reverse-direction": true
+    },
+    "group/system": {
+        "orientation": "horizontal",
+        "modules": [
+            "mpris",
+            "pulseaudio",
+            "custom/screen",
+            "custom/mxw",
+            "custom/swaync"
+        ]
+    },
+    "mpris": {
+        "format": "󰎇 {title}  {artist}",
+        "format-paused": "󰏤 {title}  {artist}",
+        "title-len": 25,
+        "artist-len": 25,
+        "tooltip": false,
+        "on-scroll-down": "playerctl next",
+        "on-scroll-up": "playerctl previous",
+        "player-icons": {
+            "spotify": "",
+            "youtube": "",
+            "default": "󰝚"
+        }
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "alsa_output.usb-Kingston_HyperX_Virtual_Surround_Sound_00000000-00.analog-stereo": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""],
+            "default-muted": ""
+        },
+        "on-click": "pavucontrol-qt",
+        "on-click-right": "pamixer -t",
+        "scroll-step": 5,
+        "escape": true
+    },
+    "custom/screen": {
+        "exec": "~/.config/waybar/screen-update.py",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 19,
+        "exec-on-click": false,
+        "format": "{percentage}% {icon}",
+        "tooltip": false,
+        "format-icons": {
+            "night-light": "󰃝",
+            "default": ["󰃞","󰃟","󰃠"]
+        },
+        "on-click": "~/.config/waybar/night-light-toggle.py",
+        "on-scroll-up": "~/.config/waybar/brightness-increase.py",
+        "on-scroll-down": "~/.config/waybar/brightness-decrease.py"
+    },
+    "custom/mxw": {
+        "exec": "~/.config/waybar/mouse-battery.py",
+        "on-click": "~/.config/waybar/mouse-battery.py",
+        "return-type": "json",
+        "format": "{percentage}% {icon}",
+        "format-icons": {
+            "critical": "󰂎",
+            "unavailable": "󰂃",
+            "default": ["󱊡", "󱊢", "󱊣"]
+        },
+        "tooltip-format": "Glorious Model O- Wireless"
+    },
+    "custom/swaync": {
+        "escape": true,
+        "tooltip": false,
+        "return-type": "json",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "format": "{icon} 󰍜",
+        "format-icons": {
+            "notification": "󰂚",
+            "none": "󰂜",
+            "dnd-notification": "󱏧",
+            "dnd-none": "󱏨",
+            "inhibited-notification": "󰂚",
+            "inhibited-none": "󰂜",
+            "dnd-inhibited-notification": "󱏧",
+            "dnd-inhibited-none": "󱏨"
+        }
+	}
+}

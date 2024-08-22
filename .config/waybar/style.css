@@ -1,0 +1,150 @@
+@import "mocha.css";
+
+* {
+    border: none;
+    font-size: 14px;
+    border-radius: 99px;
+    min-height: 26px;
+}
+
+window {
+	margin: 25px;
+}
+window#waybar {
+    background: transparent;
+}
+/*-----module groups----*/
+.modules-right {
+	font-family: JetBrains Mono NerdFont;
+    font-weight: bold;
+    background-color: transparent;
+    margin: 10px 10px 0 0;
+}
+.modules-center {
+    font-family: JetBrains Mono NerdFont;
+    background-color: alpha(@base, 0.9);
+    margin: 10px 0 0 0;
+    border: 2px solid @text;
+}
+.modules-left {
+    font-family: JetBrains Mono NerdFont;
+    background-color: alpha(@base, 0.5);
+    margin: 10px 0 0 10px;
+    border: 2px solid @text;
+}
+
+/*-----modules indv----*/
+#workspaces {
+    border-radius: 1rem;
+    margin: 2px 2px;
+    background-color: transparent;
+}
+
+#workspaces button {
+    font-family: JetBrains Mono NerdFont;
+    border-radius: 1rem;
+    padding: 0px 19px 0px 15px;
+    color: @text;
+}
+
+#workspaces button.visible {
+    background-color: @blue;
+}
+
+#workspaces button:hover {
+    background-color: @overlay2;
+}
+
+#clock {
+    padding: 0 15px;
+}
+
+#clock calendar {
+    color: @sky;
+}
+
+#tray
+{
+    padding: 0 10px 0 15px;
+    margin: 0 5px;
+    border: 2px solid @text;
+    border-radius: 99px 0 0 99px;
+    background-color: alpha(@base, 0.5);
+}
+
+#system {
+    border: 2px solid @text;
+    border-radius: 0 99px 99px 0;
+    background-color: alpha(@base, 0.5);
+    padding: 0 0 0 10px;
+}
+
+#mpris {
+    padding: 0 10px 0 5px;
+    color: @green;
+}
+
+#pulseaudio
+{
+    padding: 0 20px 0 10px;
+    background-color: transparent;
+    color: @flamingo;
+}
+#pulseaudio.muted {
+    color: @red;
+}
+
+#custom-screen {
+    padding: 0 10px 0 5px;
+    margin: 0 10px 0 0;
+    background-color: transparent;
+    color: @yellow;
+}
+#custom-screen.night-light {
+    color: @subtext0;
+}
+
+#custom-mxw {
+    padding: 0 15px 0 5px;
+    background-color: transparent;
+    color: @peach;
+}
+#custom-mxw.critical {
+    color: @red;
+}
+#custom-mxw.unavailable {
+    color: @subtext0;
+}
+
+#custom-swaync {
+    background-color: @blue;
+    color: @base;
+    border-radius: 2rem;
+    margin: 2px 2px 2px 5px;
+    padding: 0px 15px 0px 10px;
+    font-family: JetBrains Mono NerdFont;
+    font-size: 16px;
+}
+
+menu {
+    font-family:    IBM Plex Sans;
+    font-weight:    normal;
+    border-radius:  20px;
+    background:     @surface0;
+    padding:        5px;
+}
+
+menuitem {
+    border-radius:  20px;
+}
+
+menu separator {
+    margin: -10px;
+    background-color: transparent;
+    padding: 0px;
+    border-width: 0px;
+}
+
+tooltip {
+    border-radius: 5px;
+}
