@@ -1,5 +1,7 @@
 ![Screenshot of desktop](screenshot.png)
 
+Colour scheme is all [catppuccin.](https://github.com/catppuccin)
+
 Dependencies (that I remember):
 - swayfx
 - waybar
