@@ -1,4 +1,4 @@
-All these folders go in `~/.config`
+![Screenshot of desktop](screenshot.png)
 
 Dependencies (that I remember):
 - swayfx
