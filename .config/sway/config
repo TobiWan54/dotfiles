@@ -21,6 +21,7 @@ corner_radius 10
 gaps inner 5
 gaps outer 5
 default_border pixel 2
+for_window [app_id=".*"] border pixel 2
 
 # target                 title     bg    text   indicator  border
 client.focused           $lavender $base $text  $rosewater $lavender
@@ -227,6 +228,8 @@ bindsym $mod+Shift+Control+s exec "~/.config/sway/screenshot.py copysave region"
 #
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
+for_window [app_id="org.kde.dolphin" title="Moving — Dolphin"] floating enable
+for_window [app_id="org.kde.dolphin" title="Copying — Dolphin"] floating enable
 
 ### Startup
 #
